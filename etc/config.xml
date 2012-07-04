@@ -1,0 +1,75 @@
+<config>
+<!--
+	/**
+	* OrderPipe Magento integration by World Wide Access.
+	*
+	* @package    Aschroder_Orderpipe
+	* @author     Ashley Schroder (aschroder.com)
+	* @copyright 	@copyright Copyright 2012 World Wide Access
+	*/
+-->
+    <modules>
+        <Aschroder_Orderpipe>
+            <version>0.0.1</version>
+        </Aschroder_Orderpipe>
+    </modules>
+    <global>
+		<models>
+			<orderpipe>
+				<class>Aschroder_Orderpipe_Model</class>
+			</orderpipe>
+		</models>
+		<helpers>
+            <orderpipe>
+                <class>Aschroder_Orderpipe_Helper</class>
+            </orderpipe>
+        </helpers>
+	</global>
+	<frontend>
+		<events>
+			<sales_order_save_after>
+				<observers>
+					<orderpipe_save>
+						<class>orderpipe/observer</class>
+						<method>saveAfter</method>
+					</orderpipe_save>
+				</observers>
+			</sales_order_save_after>
+			<sales_order_save_commit_after>
+				<observers>
+					<orderpipe_savecommit>
+						<class>orderpipe/observer</class>
+						<method>saveAfterCommit</method>
+					</orderpipe_savecommit>
+				</observers>
+			</sales_order_save_commit_after>
+		</events>
+	</frontend>
+	<adminhtml>
+		<events>
+			<sales_order_save_after>
+				<observers>
+					<orderpipe_save>
+						<class>orderpipe/observer</class>
+						<method>saveAfter</method>
+					</orderpipe_save>
+				</observers>
+			</sales_order_save_after>
+			<sales_order_save_commit_after>
+				<observers>
+					<orderpipe_savecommit>
+						<class>orderpipe/observer</class>
+						<method>saveAfterCommit</method>
+					</orderpipe_savecommit>
+				</observers>
+			</sales_order_save_commit_after>
+		</events>
+	</adminhtml>
+	<default>
+		<orderpipe>
+			<settings>
+ 				<pingurl>https://order-pipe.appspot.com/ping/magento/neworder</pingurl>
+			</settings>
+		</orderpipe>
+	</default>
+</config>

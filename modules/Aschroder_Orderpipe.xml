@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Aschroder_Orderpipe>
+           <active>true</active>
+           <codePool>community</codePool>
+       </Aschroder_Orderpipe>
+    </modules>
+</config>

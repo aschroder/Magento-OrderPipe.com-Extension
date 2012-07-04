@@ -1,0 +1,7 @@
+# modman module description
+# see https://github.com/colinmollenhour/modman/ for more info
+# author: Ashley
+
+# OrderPipe.com Magento extension
+*	app/code/community/Aschroder/Orderpipe
+modules/Aschroder_Orderpipe.xml	app/etc/modules/Aschroder_Orderpipe.xml
